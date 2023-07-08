@@ -60,3 +60,9 @@ code {
   align-items: center;
   gap: 20px;
 }
+.task__buttons button {
+  background-color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #000;
+}

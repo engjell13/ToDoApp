@@ -32,6 +32,14 @@ function App() {
     setDescription("");
   };
 
+  const completeTask = (taskNameToDelete: string): void => {
+    setTodoList(
+      todoList.filter((task) => {
+        return task.taskName != taskNameToDelete;
+      })
+    );
+  };
+
   return (
     <div className="app">
       <div className="input__container">
@@ -64,7 +72,7 @@ function App() {
       </div>
       <div className="todo__list">
         {todoList.map((task: ITask, key: number) => {
-          return <TodoTask key={key} task={task} />;
+          return <TodoTask key={key} task={task} completeTask={completeTask} />;
         })}
       </div>
     </div>

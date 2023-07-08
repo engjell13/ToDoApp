@@ -2,9 +2,10 @@ import { ITask } from "../types";
 
 interface Props {
   task: ITask;
+  completeTask(taskNameToDelete: string): void;
 }
 
-const TodoTask = ({ task }: Props): JSX.Element => {
+const TodoTask = ({ task, completeTask }: Props): JSX.Element => {
   return (
     <div className="task">
       <div className="task__content">
@@ -13,7 +14,7 @@ const TodoTask = ({ task }: Props): JSX.Element => {
       </div>
       <div className="task__buttons">
         <h4>{task.deadLine}</h4>
-        <button>X</button>
+        <button onClick={() => completeTask(task.taskName)}>X</button>
       </div>
     </div>
   );
