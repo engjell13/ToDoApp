@@ -11,15 +11,19 @@ code {
     monospace;
 }
 .app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
+  max-width: 725px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .input__container {
   padding: 20px;
   background-color: #302555;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin-top: 100px;
 }
 .input__wrapper input {
   margin-right: 25px;
@@ -30,4 +34,29 @@ code {
   padding: 10px 20px;
   background-color: #fff;
   border-radius: 20px;
+}
+.todo__list {
+  color: #fff;
+  margin-top: 20px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #302555;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.task__content h2 {
+  font-size: 18px;
+}
+.task__content h3 {
+  font-size: 13px;
+  color: #bebebe;
+}
+.task__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
